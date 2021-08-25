@@ -1,5 +1,4 @@
-- hosts: databases
-  remote_user: root
+- hosts: all
 
   tasks:
   - name: Ensure htop is installed
