@@ -1,0 +1,6 @@
+- hosts: databases
+  remote_user: root
+
+  tasks:
+  - name: Ensure htop is installed
+    package: name=htop state=present
