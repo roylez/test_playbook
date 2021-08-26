@@ -3,3 +3,6 @@
   tasks:
   - name: Ensure htop is installed
     package: name=htop state=present
+  - name: test env TEST_ENV
+    debug:
+      msg: "{{ lookup('env', 'TEST_ENV') | default('no-defined', True) }} is its value"
